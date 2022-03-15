@@ -34,14 +34,13 @@ html {
 .appCont {
     background-color: white;
     width: 85%;
-    height: 20px;
 
     display: flex;
     flex-wrap: nowrap;
 
     position: absolute;
     z-index: 9999;
-    top: 5%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -64,8 +63,8 @@ html {
 }
 
 .user-pic.small {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
 }
 
 .user-pic > img {
@@ -80,7 +79,7 @@ html {
     font-size: .9rem;
 }
 
-.icons {
+.icon {
     font-size: 1.5rem;
     color: black;
 }
@@ -122,7 +121,7 @@ header .right-cont {
     align-items: center;
 }
 
-header .right-cont .icons {
+header .right-cont .icon {
     padding-right: 15px;
 }
 
@@ -158,7 +157,7 @@ header .right-cont .icons {
 }
 
 .fa-bell-slash {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .desktop-notification {
@@ -191,3 +190,89 @@ header .right-cont .icons {
     padding: .5rem;
 }
 
+/* Chat */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.chat {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chat .left-cont {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.last-message {
+    color: rgb(177, 177, 177);
+    font-weight: bold;
+    font-size: .8rem;
+    opacity: .6;
+}
+
+.last-message.date {
+    font-size: .7rem;
+    margin-right: 10px;
+}
+
+/* Current Chat */
+
+.current-chat {
+    width: 100%;
+    height: 720px;
+    background-repeat: repeat;
+    background-image: url(../img/mine.jpg);
+    margin: 0 auto;
+}
+
+.container-message {
+    padding-top: 2rem;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.your-message, .other-message {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    border-radius: 10px;
+}
+
+.your-message {
+    align-self: flex-end;
+    background-color: rgb(213, 249, 186);
+}
+
+.other-message {
+    background-color: white;
+}
+
+.message-text {
+    font-size: .9rem;
+    padding: 1rem;
+    
+}
+
+.timestamp {
+    font-size: .6rem;
+    color: var(--grey);
+    opacity: .6;
+    align-self: flex-end;
+    padding-bottom: 4px;
+    padding-right: 6px;
+}
+
+/* Footer - Input for Message */

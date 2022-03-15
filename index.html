@@ -20,7 +20,10 @@
 
         <!-- App -->
         <div class="appCont" id="root">
+
             <div class="firstCont">
+
+                <!-- Profile and Functions -->
                 <header>
                     <div class="left-cont">
                         <div class="user-pic small">
@@ -30,14 +33,15 @@
                     </div>
 
                     <div class="right-cont">
-                        <i class="icons grey fa-solid fa-message"></i>
-                        <i class="icons grey fa-solid fa-message"></i>
-                        <i class="icons grey fa-solid fa-message"></i>
+                        <i class="icon grey fa-solid fa-circle-notch"></i>
+                        <i class="icon grey fa-solid fa-message"></i>
+                        <i class="icon grey fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
 
+                <!-- Notification -->
                 <div class="notification">
-                    <div class="warning-notification user-pic">
+                    <div class="warning-notification user-pic small">
                         <i class="icon blue fa-solid fa-bell-slash"></i>
                     </div>
 
@@ -47,16 +51,37 @@
                     </div>
                 </div>
 
+                <!-- Input Search -->
                 <div class="search-Container">
                     <i class="search-icon fa-solid fa-magnifying-glass"></i>
                     <input type="text" name="search-bar" value="" class="search-input"
                         placeholder="Cerca o inizia una nuova chat">
                 </div>
 
+                <!-- Chats -->
+                <nav class="chat-container">
+                    <div class="chat">
+                        <div class="left-cont">
+                            <div class="user-pic">
+                                <img src="img/avatar_4.jpg" alt="gefef">
+                            </div>
+
+                            <div class="user-text">
+                                <span class="profile-title">Alessandro</span>
+                                <span class="user access last-message">Mai</span>
+                            </div>
+                        </div>
+
+                        <div class="last-message date">12:00</div>
+                    </div>
+
+                </nav>
 
             </div>
 
             <div class="secondCont">
+
+                <!-- Current User Chatting -->
                 <header>
                     <div class="left-cont">
                         <div class="user-pic small">
@@ -69,11 +94,32 @@
                     </div>
 
                     <div class="right-cont">
-                        <i class="icons grey fa-solid fa-message"></i>
-                        <i class="icons grey fa-solid fa-message"></i>
-                        <i class="icons grey fa-solid fa-message"></i>
+                        <i class="fa-solid icon grey fa-magnifying-glass"></i>
+                        <i class="fa-solid icon grey fa-paperclip"></i>
+                        <i class="fa-solid icon grey fa-ellipsis-vertical"></i>
                     </div>
                 </header>
+
+                <!-- Current Chat -->
+                <div class="current-chat">
+                    <div class="container-message">
+                        <div class="your-message">
+                            <div class="message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+                                id aperiam, maiores iusto nam placeat? Quis, laboriosam quam minus ratione quae fugiat
+                                eligendi repellendus enim velit dicta nam cumque corrupti!</div>
+                            <div class="timestamp">123132</div>
+                        </div>
+                        <div class="other-message">
+                            <div class="message-text">rfreegergerggergergeerg</div>
+                            <div class="timestamp">123132</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input for Message -->
+                <footer>
+
+                </footer>
 
             </div>
         </div>
