@@ -101,7 +101,6 @@ html {
 
 header {
     background-color: rgb(234, 234, 234);
-    border: solid red 1px;;
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
@@ -161,7 +160,7 @@ header .right-cont .icon {
 }
 
 .desktop-notification {
-    color: var(--dark-grey);
+    color: rgb(65, 65, 65);
     font-size: .8rem;
 }
 
@@ -212,6 +211,10 @@ header .right-cont .icon {
     margin-left: 25px;
 }
 
+.profile-title.big {
+    font-size: 1rem;
+}
+
 .last-message {
     color: rgb(177, 177, 177);
     font-weight: bold;
@@ -232,6 +235,7 @@ header .right-cont .icon {
     background-repeat: repeat;
     background-image: url(../img/mine.jpg);
     margin: 0 auto;
+    overflow-y: scroll;
 }
 
 .container-message {
@@ -276,3 +280,24 @@ header .right-cont .icon {
 }
 
 /* Footer - Input for Message */
+
+footer {
+    background-color: rgb(243, 238, 234);
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+footer i {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-input.write-message {
+    flex-grow: 10;
+    padding: 20px;
+    border-radius: 5px;
+}
