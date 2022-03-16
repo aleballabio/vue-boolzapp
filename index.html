@@ -27,9 +27,9 @@
                 <header>
                     <div class="left-cont">
                         <div class="user-pic small">
-                            <img src="img/avatar_2.jpg" alt="Alessandro">
+                            <img :src="'img/' + activeProfile.image" :alt="activeProfile.nome">
                         </div>
-                        <span class="profile-title">Alessandro</span>
+                        <span class="profile-title">{{ activeProfile.nome }}</span>
                     </div>
 
                     <div class="right-cont">
@@ -53,26 +53,27 @@
 
                 <!-- Input Search -->
                 <div class="search-Container">
-                    <i class="search-icon fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="search-bar" value="" class="search-input"
+                    <label for="search-bar" name="search-emoji"><i
+                            class="search-icon fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" name="search-bar" v-model="searchingProfile" value="" class="search-input"
                         placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <!-- Chats -->
                 <nav class="chat-container">
-                    <div class="chat">
+                    <div v-for="chat in chats" @click="changeCurrentChat(index)" class="chat">
                         <div class="left-cont">
                             <div class="user-pic">
-                                <img src="img/avatar_4.jpg" alt="gefef">
+                                <img :src="'img/' + chat.image" :alt="chat.nome">
                             </div>
 
                             <div class="user-text">
-                                <span class="profile-title big">Alessandro</span>
-                                <span class="user access last-message">Mai</span>
+                                <span class="profile-title big">{{ chat.nome }}</span>
+                                <span class="user access last-message">{{ chat.lastMessage }}</span>
                             </div>
                         </div>
 
-                        <div class="last-message date">12:00</div>
+                        <div class="last-message date">{{ chat.lastMessage }}</div>
                     </div>
                 </nav>
 
@@ -118,8 +119,8 @@
                 <!-- Input for Message -->
                 <footer>
                     <i class="fa-regular fa-face-smile icon dark-grey"></i>
-                    <input type="text" class="search-input write-message" name="text-for-message"
-                        placeholder="Scrivi un messaggio">
+                    <input type="text" v-model="activeProfile.textMessage" class="search-input write-message"
+                        name="text-for-message" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone icon dark-grey"></i>
                 </footer>
 
