@@ -14,7 +14,7 @@ const app = new Vue({
             {
                 nome: "Mario",
                 image: "avatar_1.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "Miao Miao",
@@ -27,7 +27,7 @@ const app = new Vue({
             {
                 nome: "Genoveffa",
                 image: "avatar_2.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "Miao Miao",
@@ -40,7 +40,7 @@ const app = new Vue({
             {
                 nome: "Michelina B.",
                 image: "avatar_3.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "Miao Miao",
@@ -53,7 +53,7 @@ const app = new Vue({
             {
                 nome: "Benedetta",
                 image: "avatar_4.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "Miao Miao",
@@ -66,7 +66,7 @@ const app = new Vue({
             {
                 nome: "Susan",
                 image: "avatar_5.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "miao miao",
@@ -79,7 +79,7 @@ const app = new Vue({
             {
                 nome: "Carletto T.",
                 image: "avatar_6.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "miao miao",
@@ -92,7 +92,7 @@ const app = new Vue({
             {
                 nome: "Portina",
                 image: "avatar_7.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "miao miao",
@@ -105,7 +105,7 @@ const app = new Vue({
             {
                 nome: "Yang J.",
                 image: "avatar_8.jpg",
-                lastAccess: "Ultimo accesso alle:",
+                lastAccess: "12:00",
                 messages: [
                     {
                         text: "miao miao",
@@ -130,6 +130,8 @@ const app = new Vue({
                 received: false,
             });
             this.activeProfile.textMessage = "";
+            let container = document.querySelector(".current-chat")
+            container.scrollTop = container.scrollHeight;
             console.log(currentChat);
             console.log(this.chats[currentChat].messages);
 
