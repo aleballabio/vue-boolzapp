@@ -69,11 +69,12 @@
 
                             <div class="user-text">
                                 <span class="profile-title big">{{ chat.nome }}</span>
-                                <span class="user access last-message">{{ chat.lastMessage }}</span>
+                                <span class="user access last-message">{{ chat.messages[chat.messages.length -
+                                    1].text.substring(0,8)}}...</span>
                             </div>
                         </div>
 
-                        <div class="last-message date">{{ chat.lastMessage }}</div>
+                        <div class="last-message date">{{ }}</div>
                     </div>
                 </nav>
 
@@ -89,7 +90,7 @@
                         </div>
                         <div class="user-text">
                             <span class="profile-title">{{ chats[activeChat].nome }}</span>
-                            <span class="user-access">{{ chats[activeChat].lastAccess }}</span>
+                            <span class="user-access">{{ chats[activeChat].lastAccess }} </span>
                         </div>
                     </div>
 

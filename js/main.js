@@ -71,11 +71,10 @@ const app = new Vue({
             {
                 nome: "Susan",
                 image: "avatar_5.jpg",
-                lastMessage: "",
                 lastAccess: "",
                 messages: [
                     {
-                        text: "",
+                        text: "miao miao",
                         time: "12:25",
                         received: true,
                     },
@@ -89,7 +88,7 @@ const app = new Vue({
                 lastAccess: "",
                 messages: [
                     {
-                        text: "",
+                        text: "miao miao",
                         time: "12:25",
                         received: true,
                     },
@@ -103,7 +102,7 @@ const app = new Vue({
                 lastAccess: "",
                 messages: [
                     {
-                        text: "",
+                        text: "miao miao",
                         time: "12:25",
                         received: true,
                     },
@@ -117,7 +116,7 @@ const app = new Vue({
                 lastAccess: "",
                 messages: [
                     {
-                        text: "",
+                        text: "miao miao",
                         time: "12:25",
                         received: true,
                     },
@@ -134,13 +133,23 @@ const app = new Vue({
 
         sendMessage(currentChat) {
             this.chats[currentChat].messages.push({
-                text: this.activeProfile.textMessage,
+                text: this.activeProfile.textMessage.trim(),
                 date: "",
                 received: false,
             });
             this.activeProfile.textMessage = "";
             console.log(currentChat);
             console.log(this.chats[currentChat].messages);
+
+            setTimeout(this.answerText, 1000);
         },
-    }
+
+        answerText() {
+            this.chats[this.activeChat].messages.push({
+                text: "ok",
+                date: "",
+                received: true,
+            });
+        },
+    },
 });

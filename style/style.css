@@ -255,6 +255,7 @@ header .right-cont .icon {
     justify-content: center;
     width: 45%;
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 .your-message {
