@@ -16,7 +16,7 @@ html {
 
 .container {
     background-color: rgb(218, 219, 211);
-    width: 100%;
+    width: 100vw;
     min-width: 1400px;
     height: 100vh;
     position: relative;
@@ -36,7 +36,7 @@ html {
     width: 85%;
     display: flex;
     flex-wrap: nowrap;
-    max-height: 865px;
+    height: 90%;
 
     position: absolute;
     z-index: 9999;
@@ -48,12 +48,13 @@ html {
 .firstCont {
     flex-basis: 35%;
     flex-shrink: 0;
-    
+    height: 100%;
 }
 
 .secondCont {
     flex-basis: 65%;
     flex-shrink: 0;
+    height: 100%;
     
 }
 
@@ -105,7 +106,7 @@ header {
     background-color: rgb(234, 234, 234);
     display: flex;
     justify-content: space-between;
-    height: 10%;
+    height: 5rem;
 }
 
 header .left-cont {
@@ -144,7 +145,7 @@ header .right-cont .icon {
     background-color: var(--blue);
     display: flex;
     align-items: center;
-    height: 10%;
+    height: 5rem;
 }
 
 .warning-notification {
@@ -170,7 +171,7 @@ header .right-cont .icon {
     display: flex;
     align-items: center;
     background-color: white;
-    height: 10%;
+    height: 5rem;
 }
 
 .search-icon {
@@ -195,7 +196,7 @@ header .right-cont .icon {
     flex-direction: column;
     background-color: white;
     overflow-y: scroll;
-    height: 70%;
+    height: calc(100% - 15rem);
 }
 
 .chat {
@@ -236,7 +237,7 @@ header .right-cont .icon {
     background-image: url(../img/mine.jpg);
     margin: 0 auto;
     overflow-y: scroll;
-    height: 80%;
+    height: calc(100% - 10rem)
 }
 
 .container-message {
@@ -287,7 +288,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10%;
+    height: 5rem;
 
 }
 
