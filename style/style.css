@@ -207,6 +207,10 @@ header .right-cont .icon {
     padding-bottom: 10px;
 }
 
+.chat:hover {
+    background-color: rgb(235, 235, 235);
+}
+
 .chat .left-cont {
     display: flex;
     justify-content: center;
