@@ -15,6 +15,7 @@ const app = new Vue({
                 nome: "Mario",
                 image: "avatar_1.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "Miao Miao",
@@ -28,6 +29,7 @@ const app = new Vue({
                 nome: "Genoveffa",
                 image: "avatar_2.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "Miao Miao",
@@ -41,6 +43,7 @@ const app = new Vue({
                 nome: "Michelina B.",
                 image: "avatar_3.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "Miao Miao",
@@ -54,6 +57,7 @@ const app = new Vue({
                 nome: "Benedetta",
                 image: "avatar_4.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "Miao Miao",
@@ -67,6 +71,7 @@ const app = new Vue({
                 nome: "Susan",
                 image: "avatar_5.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "miao miao",
@@ -80,6 +85,7 @@ const app = new Vue({
                 nome: "Carletto T.",
                 image: "avatar_6.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "miao miao",
@@ -93,6 +99,7 @@ const app = new Vue({
                 nome: "Portina",
                 image: "avatar_7.jpg",
                 lastAccess: "12:00",
+                show: true,
                 messages: [
                     {
                         text: "miao miao",
@@ -106,6 +113,7 @@ const app = new Vue({
                 nome: "Yang J.",
                 image: "avatar_8.jpg",
                 lastAccess: "12:00 AM",
+                show: true,
                 messages: [
                     {
                         text: "miao miao",
@@ -147,7 +155,20 @@ const app = new Vue({
                 received: true,
             });
         },
+
+        searchUser() {
+            this.chats.forEach((element) => {
+                if (element.nome.toLowerCase().includes(this.searchingProfile.toLowerCase())) {
+                    element.show = true;
+                }
+
+                else {
+                    element.show = false;
+                }
+            });
+        }
     },
+
 
 
 });

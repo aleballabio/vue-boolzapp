@@ -55,13 +55,14 @@
                 <div class="search-Container">
                     <label for="search-bar" name="search-emoji"><i
                             class="search-icon fa-solid fa-magnifying-glass"></i></label>
-                    <input type="text" name="search-bar" v-model="searchingProfile" value="" class="search-input"
-                        placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" @keyup="searchUser" name="search-bar" v-model="searchingProfile" value=""
+                        class="search-input" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <!-- Chats -->
                 <nav class="chat-container">
-                    <div v-for="(chat, index) in chats" @click="changeCurrentChat(index)" class="chat">
+                    <div v-for="(chat, index) in chats" v-if="chat.show == true" @click="changeCurrentChat(index)"
+                        class="chat">
                         <div class="left-cont">
                             <div class="user-pic">
                                 <img :src="'img/' + chat.image" :alt="chat.nome">
