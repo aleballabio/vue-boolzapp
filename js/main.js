@@ -14,11 +14,11 @@ const app = new Vue({
             {
                 nome: "Mario",
                 image: "avatar_1.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "Miao Miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -27,11 +27,11 @@ const app = new Vue({
             {
                 nome: "Genoveffa",
                 image: "avatar_2.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "Miao Miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -40,11 +40,11 @@ const app = new Vue({
             {
                 nome: "Michelina B.",
                 image: "avatar_3.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "Miao Miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -53,11 +53,11 @@ const app = new Vue({
             {
                 nome: "Benedetta",
                 image: "avatar_4.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "Miao Miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -66,11 +66,11 @@ const app = new Vue({
             {
                 nome: "Susan",
                 image: "avatar_5.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "miao miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -79,11 +79,11 @@ const app = new Vue({
             {
                 nome: "Carletto T.",
                 image: "avatar_6.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "miao miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -96,7 +96,7 @@ const app = new Vue({
                 messages: [
                     {
                         text: "miao miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -105,11 +105,11 @@ const app = new Vue({
             {
                 nome: "Yang J.",
                 image: "avatar_8.jpg",
-                lastAccess: "12:00",
+                lastAccess: "12:00 AM",
                 messages: [
                     {
                         text: "miao miao",
-                        time: "12:25",
+                        time: "12:25 AM",
                         received: true,
                     },
                 ]
@@ -126,7 +126,7 @@ const app = new Vue({
         sendMessage(currentChat) {
             this.chats[currentChat].messages.push({
                 text: this.activeProfile.textMessage.trim(),
-                time: "",
+                time: dayjs().format('h:m A').toString(),
                 received: false,
             });
             this.activeProfile.textMessage = "";
@@ -141,7 +141,7 @@ const app = new Vue({
         answerText() {
             this.chats[this.activeChat].messages.push({
                 text: "ok",
-                time: "",
+                time: dayjs().format('h:m A').toString(),
                 received: true,
             });
         },

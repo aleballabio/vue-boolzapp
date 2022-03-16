@@ -74,7 +74,8 @@
                             </div>
                         </div>
 
-                        <div class="last-message date">{{ }}</div>
+                        <div class="last-message date">{{ chat.messages[chat.messages.length -
+                            1].time }}</div>
                     </div>
                 </nav>
 
@@ -128,6 +129,9 @@
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"
+        integrity="sha512-KTFpdbCb05CY4l242bLjyaPhoL9vAy4erP1Wkn7Rji0AG6jx6zzGtKkdHc7jUOYOVSmbMbTg728u260CA/Qugg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 </body>
 
