@@ -154,6 +154,8 @@ const app = new Vue({
                 time: dayjs().format('h:m A').toString(),
                 received: true,
             });
+
+            this.chats[this.activeChat].lastAccess = dayjs().format('h:m A').toString();
         },
 
         searchUser() {
