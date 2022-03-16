@@ -120,6 +120,7 @@ const app = new Vue({
     methods: {
         changeCurrentChat(number) {
             this.activeChat = number;
+            setTimeout(this.scrollDown, 10);
             console.log(this.activeChat);
         },
 
