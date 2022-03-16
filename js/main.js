@@ -130,12 +130,13 @@ const app = new Vue({
                 received: false,
             });
             this.activeProfile.textMessage = "";
+            setTimeout(this.scrollDown, 10);
+            setTimeout(this.answerText, 1000);
+        },
+
+        scrollDown() {
             let container = document.querySelector(".current-chat")
             container.scrollTop = container.scrollHeight;
-            console.log(currentChat);
-            console.log(this.chats[currentChat].messages);
-
-            setTimeout(this.answerText, 1000);
         },
 
         answerText() {
@@ -146,4 +147,6 @@ const app = new Vue({
             });
         },
     },
+
+
 });
