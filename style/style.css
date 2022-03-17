@@ -257,6 +257,7 @@ header .right-cont .icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     width: 45%;
     border-radius: 10px;
     word-wrap: break-word;
@@ -284,6 +285,50 @@ header .right-cont .icon {
     align-self: flex-end;
     padding-bottom: 4px;
     padding-right: 6px;
+}
+
+.menu-icon.fa-chevron-down {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: none;
+    color: var(--grey);
+}
+
+.your-message:hover .menu-icon.fa-chevron-down,
+.other-message:hover .menu-icon.fa-chevron-down {
+    display: block;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 35px;
+    right: 10%;
+    width: 60%;
+    background-color: rgb(248, 248, 248);
+    border-radius: 2px;
+    box-shadow: 0px 0px 16px -11px rgb(0 0 0);
+    z-index: 10;
+}
+
+.menu-dropdown ul {
+    list-style-type: none;
+    color: var(--dark-grey);
+    text-align: center;
+}
+
+.menu-dropdown ul li {
+    padding: 1.2rem;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.menu-dropdown ul li:hover {
+    background-color:  rgb(235, 235, 235) ;
+}
+
+.menu-icon.fa-chevron-down.chavron-active {
+    display: block;
 }
 
 /* Footer - Input for Message */

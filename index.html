@@ -70,12 +70,14 @@
 
                             <div class="user-text">
                                 <span class="profile-title big">{{ chat.nome }}</span>
-                                <span class="user access last-message">{{ chat.messages[chat.messages.length -
+                                <span class="user access last-message" v-if="chat.messages.length > 0">{{
+                                    chat.messages[chat.messages.length -
                                     1].text.substring(0,8)}}...</span>
                             </div>
                         </div>
 
-                        <div class="last-message date">{{ chat.messages[chat.messages.length -
+                        <div class="last-message date" v-if="chat.messages.length > 0">{{
+                            chat.messages[chat.messages.length -
                             1].time }}</div>
                     </div>
                 </nav>
@@ -106,9 +108,19 @@
                 <!-- Current Chat -->
                 <div class="current-chat">
                     <div class="container-message">
-                        <div v-for="message in chats[activeChat].messages"
+                        <div v-for="(message, index) in chats[activeChat].messages"
                             :class="message.received == true ? 'other-message' : 'your-message'">
                             <div class="message-text"> {{ message.text }}</div>
+                            <i class="fa fa-chevron-down icon menu-icon"
+                                @click="message.dropdownMenu = !message.dropdownMenu"
+                                :class="message.dropdownMenu == true ? 'chavron-active' : '' "></i>
+                            <div class="menu-dropdown" v-if="message.dropdownMenu == true">
+                                <ul class="menu-cont-section">
+                                    <li class="drop-items">Info Message</li>
+                                    <li class="drop-items" @click="removeMessage(index)">Delete Message</li>
+                                </ul>
+                            </div>
+
                             <div class="timestamp">{{ message.time }}</div>
                         </div>
 

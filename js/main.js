@@ -14,13 +14,14 @@ const app = new Vue({
             {
                 nome: "Mario",
                 image: "avatar_1.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "Miao Miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -28,13 +29,21 @@ const app = new Vue({
             {
                 nome: "Genoveffa",
                 image: "avatar_2.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "Miao Miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
+                    },
+
+                    {
+                        text: "Miao Miao",
+                        time: "12:25 AM",
+                        received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -42,13 +51,21 @@ const app = new Vue({
             {
                 nome: "Michelina B.",
                 image: "avatar_3.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "Miao Miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
+                    },
+
+                    {
+                        text: "Miao Miao",
+                        time: "12:25 AM",
+                        received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -56,13 +73,21 @@ const app = new Vue({
             {
                 nome: "Benedetta",
                 image: "avatar_4.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "Miao Miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
+                    },
+
+                    {
+                        text: "Miao Miao",
+                        time: "12:25 AM",
+                        received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -70,13 +95,14 @@ const app = new Vue({
             {
                 nome: "Susan",
                 image: "avatar_5.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "miao miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -84,13 +110,14 @@ const app = new Vue({
             {
                 nome: "Carletto T.",
                 image: "avatar_6.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "miao miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -98,13 +125,14 @@ const app = new Vue({
             {
                 nome: "Portina",
                 image: "avatar_7.jpg",
-                lastAccess: "12:00",
+                lastAccess: "23/12/2021 23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "miao miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -112,13 +140,14 @@ const app = new Vue({
             {
                 nome: "Yang J.",
                 image: "avatar_8.jpg",
-                lastAccess: "12:00 AM",
+                lastAccess: "23/12/2021 12:00 AM",
                 show: true,
                 messages: [
                     {
                         text: "miao miao",
                         time: "12:25 AM",
                         received: true,
+                        dropdownMenu: false,
                     },
                 ]
             },
@@ -137,6 +166,7 @@ const app = new Vue({
                 text: this.activeProfile.textMessage.trim(),
                 time: dayjs().format('h:m A').toString(),
                 received: false,
+                dropdownMenu: false,
             });
             this.activeProfile.textMessage = "";
             setTimeout(this.scrollDown, 10);
@@ -153,9 +183,11 @@ const app = new Vue({
                 text: "ok",
                 time: dayjs().format('h:m A').toString(),
                 received: true,
+                dropdownMenu: false,
             });
 
-            this.chats[this.activeChat].lastAccess = dayjs().format('h:m A').toString();
+            this.chats[this.activeChat].lastAccess = dayjs().format('D/M/YYYY h:m A').toString();
+            console.log(this.chats[this.activeChat].lastAccess);
         },
 
         searchUser() {
@@ -168,7 +200,12 @@ const app = new Vue({
                     element.show = false;
                 }
             });
-        }
+        },
+
+        removeMessage(number) {
+            this.chats[this.activeChat].messages.splice(number, 1);
+            console.log(this.chats[this.activeChat].messages[number]);
+        },
     },
 
 
